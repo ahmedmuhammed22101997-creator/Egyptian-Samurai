@@ -1,0 +1,104 @@
+{
+  "brand": "エジプシャン サムライ",
+  "nav": {
+    "home": "ホーム",
+    "guides": "ガイド一覧",
+    "airportPickup": "空港送迎",
+    "explore": "エジプト探訪",
+    "about": "私たちについて",
+    "contact": "お問い合わせ"
+  },
+  "home": {
+    "hero": {
+      "title": "エジプトを日本人と一緒に体験",
+      "subtitle": "信頼できる日本語対応ガイドと最高の旅を",
+      "cta": "ガイドを探す"
+    },
+    "categories": {
+      "guides": {
+        "title": "ツアーガイド",
+        "description": "経験豊富な公認ガイドまたはトラベルバディと一緒に、エジプトの魅力を深く知りましょう。",
+        "cta": "詳しく見る"
+      },
+      "pickup": {
+        "title": "空港送迎",
+        "description": "安心・快適な空港送迎サービス。到着から目的地まで日本語でサポートします。",
+        "cta": "詳しく見る"
+      },
+      "explore": {
+        "title": "エジプト探訪",
+        "description": "ピラミッドからルクソールまで、エジプトの世界遺産と名所を探索しましょう。",
+        "cta": "詳しく見る"
+      }
+    },
+    "about": {
+      "title": "私たちについて"
+    },
+    "reviews": {
+      "title": "お客様の声"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "email": "メール",
+      "whatsapp": "WhatsApp",
+      "line": "LINE"
+    }
+  },
+  "guides": {
+    "title": "ガイド一覧",
+    "subtitle": "日本語対応の経験豊富なガイドをご紹介します",
+    "filter": {
+      "all": "すべて",
+      "licensed": "公認ガイド",
+      "travelBuddy": "トラベルバディ"
+    },
+    "licensed": "公認ガイド",
+    "travelBuddy": "トラベルバディ",
+    "experience": "経験年数",
+    "years": "年",
+    "languages": "対応言語",
+    "viewProfile": "プロフィールを見る",
+    "packages": "ツアーパッケージ",
+    "bookNow": "予約する",
+    "duration": "期間",
+    "price": "料金",
+    "included": "含まれるもの"
+  },
+  "pickup": {
+    "title": "空港送迎サービス",
+    "subtitle": "快適・安心の空港送迎",
+    "capacity": "定員",
+    "price": "料金",
+    "vehicle": "車両タイプ",
+    "bookNow": "予約する",
+    "viewDetails": "詳細を見る"
+  },
+  "explore": {
+    "title": "エジプトを探索する",
+    "subtitle": "歴史と文化の宝庫エジプトの名所をご紹介",
+    "tips": "旅のヒント",
+    "location": "場所",
+    "featured": "おすすめ"
+  },
+  "about": {
+    "title": "私たちについて"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "メッセージ",
+    "send": "送信する"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "notFound": "見つかりませんでした",
+    "backToList": "一覧に戻る",
+    "usd": "USD",
+    "perPerson": "/ 人"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

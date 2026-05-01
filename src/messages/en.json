@@ -1,0 +1,104 @@
+{
+  "brand": "Egyptian SAMURAI",
+  "nav": {
+    "home": "Home",
+    "guides": "Guides",
+    "airportPickup": "Airport Pickup",
+    "explore": "Explore Egypt",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Experience Egypt with Japanese Guides",
+      "subtitle": "Trusted Japanese-speaking guides for your perfect journey",
+      "cta": "Find a Guide"
+    },
+    "categories": {
+      "guides": {
+        "title": "Tour Guides",
+        "description": "Explore Egypt's wonders with experienced licensed guides or travel buddies who speak Japanese.",
+        "cta": "Learn More"
+      },
+      "pickup": {
+        "title": "Airport Pickup",
+        "description": "Safe and comfortable airport transfer service with Japanese-speaking support from arrival to destination.",
+        "cta": "Learn More"
+      },
+      "explore": {
+        "title": "Explore Egypt",
+        "description": "Discover Egypt's UNESCO World Heritage sites and landmarks, from the Pyramids to Luxor.",
+        "cta": "Learn More"
+      }
+    },
+    "about": {
+      "title": "About Us"
+    },
+    "reviews": {
+      "title": "Guest Reviews"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "line": "LINE"
+    }
+  },
+  "guides": {
+    "title": "Tour Guides",
+    "subtitle": "Experienced Japanese-speaking guides for your Egyptian adventure",
+    "filter": {
+      "all": "All",
+      "licensed": "Licensed Guide",
+      "travelBuddy": "Travel Buddy"
+    },
+    "licensed": "Licensed Guide",
+    "travelBuddy": "Travel Buddy",
+    "experience": "Experience",
+    "years": "years",
+    "languages": "Languages",
+    "viewProfile": "View Profile",
+    "packages": "Tour Packages",
+    "bookNow": "Book Now",
+    "duration": "Duration",
+    "price": "Price",
+    "included": "What's Included"
+  },
+  "pickup": {
+    "title": "Airport Pickup Services",
+    "subtitle": "Comfortable and reliable airport transfers",
+    "capacity": "Capacity",
+    "price": "Price",
+    "vehicle": "Vehicle Type",
+    "bookNow": "Book Now",
+    "viewDetails": "View Details"
+  },
+  "explore": {
+    "title": "Explore Egypt",
+    "subtitle": "Discover the treasures of history and culture",
+    "tips": "Travel Tips",
+    "location": "Location",
+    "featured": "Featured"
+  },
+  "about": {
+    "title": "About Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Not found",
+    "backToList": "Back to List",
+    "usd": "USD",
+    "perPerson": "/ person"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
