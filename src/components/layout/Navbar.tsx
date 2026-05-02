@@ -22,9 +22,11 @@ export default function Navbar() {
 
   const toggleLocale = () => {
     const newLocale = locale === 'ja' ? 'en' : 'ja'
-    // Strip current locale prefix if present
-    const pathWithoutLocale = pathname.replace(/^\/(ja|en)/, '') || '/'
-    router.push(`/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`)
+    // Strip any current locale prefix
+    const bare = pathname.replace(/^\/(ja|en)(?=\/|$)/, '') || '/'
+    // Japanese is the default locale (no prefix); English is prefixed with /en
+    const target = newLocale === 'ja' ? bare : `/en${bare === '/' ? '' : bare}`
+    router.push(target)
   }
 
   const navLinks = [
@@ -76,9 +78,15 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleLocale}
-              className={`p-2 ${scrolled ? 'text-[#2C2C2C]' : 'text-white'}`}
+              aria-label={locale === 'ja' ? 'Switch to English' : '日本語に切り替え'}
+              className={`flex items-center gap-1 px-2 py-1 rounded-md text-sm font-semibold border transition-colors ${
+                scrolled
+                  ? 'text-[#2C2C2C] border-[#2C2C2C]/20 hover:bg-[#F5EDD8]'
+                  : 'text-white border-white/40 hover:bg-white/10'
+              }`}
             >
-              <Globe className="w-5 h-5" />
+              <Globe className="w-4 h-4" />
+              {locale === 'ja' ? 'EN' : '日本語'}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
