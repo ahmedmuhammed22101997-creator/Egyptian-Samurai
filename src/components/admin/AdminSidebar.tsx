@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import {
-  LayoutDashboard, Image, Users, Package, Car, Map, Star, Info, Phone, Settings, LogOut
+  LayoutDashboard, Image, Users, Package, Car, Map, Star, Info, Phone, Settings, LogOut, BarChart3
 } from 'lucide-react'
 
 const navItems = [
   { href: '/admin', icon: LayoutDashboard, label: 'ダッシュボード' },
+  { href: '/admin/analytics', icon: BarChart3, label: 'アナリティクス' },
   { href: '/admin/hero-images', icon: Image, label: 'ヒーロー画像' },
   { href: '/admin/guides', icon: Users, label: 'ガイド' },
   { href: '/admin/packages', icon: Package, label: 'パッケージ' },
@@ -37,7 +38,7 @@ export default function AdminSidebar() {
             <span className="text-white font-bold text-sm">E</span>
           </div>
           <div>
-            <p className="text-white font-bold text-sm">Egypt Tour</p>
+            <p className="text-white font-bold text-sm">Egyptian SAMURAI</p>
             <p className="text-gray-400 text-xs">管理パネル</p>
           </div>
         </div>
