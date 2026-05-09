@@ -13,7 +13,7 @@ export default function Logo({ size = 40, className = '', priority = false }: Lo
       style={{ width: size, height: size }}
     >
       <Image
-        src="/logo.png"
+        src="/logo.svg"
         alt="Egyptian SAMURAI"
         fill
         sizes={`${size}px`}
