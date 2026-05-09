@@ -17,7 +17,9 @@ import type { Guide } from '@/types/database'
 
 const emptyForm = {
   name: '', type: 'licensed' as 'licensed' | 'travel_buddy', bio_ja: '', bio_en: '',
-  photo_url: '', languages: '', experience_years: 0, license_number: '', specialties: '', is_active: true
+  photo_url: '', languages: '', experience_years: 0, license_number: '', specialties: '',
+  age: 0, has_license: false, service_areas: '',
+  is_active: true
 }
 
 export default function GuidesAdminClient({ initialGuides }: { initialGuides: Guide[] }) {
@@ -38,7 +40,11 @@ export default function GuidesAdminClient({ initialGuides }: { initialGuides: Gu
       name: g.name, type: g.type, bio_ja: g.bio_ja, bio_en: g.bio_en,
       photo_url: g.photo_url || '', languages: (g.languages || []).join(', '),
       experience_years: g.experience_years, license_number: g.license_number || '',
-      specialties: (g.specialties || []).join(', '), is_active: g.is_active,
+      specialties: (g.specialties || []).join(', '),
+      age: g.age || 0,
+      has_license: g.has_license ?? false,
+      service_areas: (g.service_areas || []).join(', '),
+      is_active: g.is_active,
     })
     setOpen(true)
   }
@@ -60,6 +66,8 @@ export default function GuidesAdminClient({ initialGuides }: { initialGuides: Gu
       ...form,
       languages: form.languages.split(',').map((s) => s.trim()).filter(Boolean),
       specialties: form.specialties.split(',').map((s) => s.trim()).filter(Boolean),
+      service_areas: form.service_areas.split(',').map((s) => s.trim()).filter(Boolean),
+      age: form.age || null,
       license_number: form.license_number || null,
       photo_url: form.photo_url || null,
     }
@@ -170,11 +178,19 @@ export default function GuidesAdminClient({ initialGuides }: { initialGuides: Gu
             <div><Label>自己紹介（日本語）</Label><Textarea value={form.bio_ja} onChange={(e) => setForm((f) => ({ ...f, bio_ja: e.target.value }))} rows={3} /></div>
             <div><Label>自己紹介（英語）</Label><Textarea value={form.bio_en} onChange={(e) => setForm((f) => ({ ...f, bio_en: e.target.value }))} rows={3} /></div>
             <div className="grid grid-cols-2 gap-4">
-              <div><Label>経験年数</Label><Input type="number" value={form.experience_years} onChange={(e) => setForm((f) => ({ ...f, experience_years: parseInt(e.target.value) || 0 }))} /></div>
-              <div><Label>ライセンス番号</Label><Input value={form.license_number} onChange={(e) => setForm((f) => ({ ...f, license_number: e.target.value }))} /></div>
+              <div><Label>年齢 / Age</Label><Input type="number" min="0" value={form.age} onChange={(e) => setForm((f) => ({ ...f, age: parseInt(e.target.value) || 0 }))} /></div>
+              <div><Label>経験年数 / Experience (years)</Label><Input type="number" value={form.experience_years} onChange={(e) => setForm((f) => ({ ...f, experience_years: parseInt(e.target.value) || 0 }))} /></div>
             </div>
-            <div><Label>対応言語（カンマ区切り）</Label><Input value={form.languages} onChange={(e) => setForm((f) => ({ ...f, languages: e.target.value }))} placeholder="日本語, 英語, アラビア語" /></div>
-            <div><Label>専門分野（カンマ区切り）</Label><Input value={form.specialties} onChange={(e) => setForm((f) => ({ ...f, specialties: e.target.value }))} placeholder="歴史, 文化, 食事" /></div>
+            <div className="flex items-center gap-3 p-3 rounded-md bg-[#F5EDD8]/50 border border-[#E8D5B7]">
+              <Switch checked={form.has_license} onCheckedChange={(v) => setForm((f) => ({ ...f, has_license: v }))} />
+              <Label className="cursor-pointer">ライセンス保有 / Has tourism license</Label>
+            </div>
+            {form.has_license && (
+              <div><Label>ライセンス番号 / License number</Label><Input value={form.license_number} onChange={(e) => setForm((f) => ({ ...f, license_number: e.target.value }))} /></div>
+            )}
+            <div><Label>対応エリア（カンマ区切り）/ Service areas</Label><Input value={form.service_areas} onChange={(e) => setForm((f) => ({ ...f, service_areas: e.target.value }))} placeholder="カイロ, ルクソール, アスワン, アレキサンドリア" /></div>
+            <div><Label>対応言語（カンマ区切り）/ Languages</Label><Input value={form.languages} onChange={(e) => setForm((f) => ({ ...f, languages: e.target.value }))} placeholder="日本語, 英語, アラビア語" /></div>
+            <div><Label>専門分野（カンマ区切り）/ Specialties</Label><Input value={form.specialties} onChange={(e) => setForm((f) => ({ ...f, specialties: e.target.value }))} placeholder="歴史, 文化, 食事" /></div>
             <div className="flex items-center gap-2"><Switch checked={form.is_active} onCheckedChange={(v) => setForm((f) => ({ ...f, is_active: v }))} /><Label>公開する</Label></div>
             <Button onClick={handleSave} className="w-full">保存</Button>
           </div>

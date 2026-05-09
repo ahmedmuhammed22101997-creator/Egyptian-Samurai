@@ -58,13 +58,29 @@ export default function GuideDetailClient({ guide, packages }: GuideDetailClient
                   <span className="text-gray-400">{t('experience')}</span>
                   <p className="font-semibold">{guide.experience_years} {t('years')}</p>
                 </div>
-                {guide.license_number && (
+                {guide.age && (
                   <div>
-                    <span className="text-gray-400">ライセンス番号</span>
-                    <p className="font-semibold">{guide.license_number}</p>
+                    <span className="text-gray-400">年齢</span>
+                    <p className="font-semibold">{guide.age}</p>
                   </div>
                 )}
+                <div>
+                  <span className="text-gray-400">ライセンス</span>
+                  <p className="font-semibold">
+                    {guide.has_license ? `保有 ${guide.license_number ? `(${guide.license_number})` : ''}` : '未保有'}
+                  </p>
+                </div>
               </div>
+              {guide.service_areas?.length > 0 && (
+                <div className="mt-4">
+                  <span className="text-gray-400 text-sm">対応エリア</span>
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {guide.service_areas.map((area) => (
+                      <Badge key={area} variant="secondary">{area}</Badge>
+                    ))}
+                  </div>
+                </div>
+              )}
               {guide.languages?.length > 0 && (
                 <div className="mt-4">
                   <span className="text-gray-400 text-sm">{t('languages')}</span>

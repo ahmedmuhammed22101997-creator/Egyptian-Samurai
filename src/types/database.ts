@@ -22,6 +22,9 @@ export interface Guide {
   experience_years: number
   license_number: string | null
   specialties: string[]
+  age: number | null
+  has_license: boolean
+  service_areas: string[]
   is_active: boolean
   created_at: string
 }
