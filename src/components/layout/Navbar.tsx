@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTranslations, useLocale } from 'next-intl'
 import { Menu, X, Globe } from 'lucide-react'
+import Logo from '@/components/Logo'
 
 export default function Navbar() {
   const t = useTranslations('nav')
@@ -44,9 +45,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#D4AF37] rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">E</span>
-            </div>
+            <Logo size={36} priority />
             <span className={`font-bold text-lg ${scrolled ? 'text-[#2C2C2C]' : 'text-white'}`}>
               {tBrand('brand')}
             </span>

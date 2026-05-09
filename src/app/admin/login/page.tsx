@@ -5,7 +5,8 @@ import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Lock, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import Logo from '@/components/Logo'
 
 export default function AdminLoginPage() {
   const router = useRouter()
@@ -34,8 +35,8 @@ export default function AdminLoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#1E5F8E] to-[#0E4F7E] flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4">
-            <Lock className="w-8 h-8 text-white" />
+          <div className="mx-auto mb-4 flex justify-center">
+            <Logo size={80} priority />
           </div>
           <h1 className="text-2xl font-bold text-[#2C2C2C]">管理パネル</h1>
           <p className="text-gray-500 text-sm mt-1">Egyptian SAMURAI Admin</p>

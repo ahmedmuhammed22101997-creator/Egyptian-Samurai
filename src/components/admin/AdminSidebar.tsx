@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/client'
 import {
   LayoutDashboard, Image, Users, Package, Car, Map, Star, Info, Phone, Settings, LogOut, BarChart3
 } from 'lucide-react'
+import Logo from '@/components/Logo'
 
 const navItems = [
   { href: '/admin', icon: LayoutDashboard, label: 'ダッシュボード' },
@@ -34,9 +35,7 @@ export default function AdminSidebar() {
     <aside className="w-64 bg-[#2C2C2C] min-h-screen flex flex-col fixed left-0 top-0 bottom-0">
       <div className="p-6 border-b border-gray-700">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-[#D4AF37] rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-sm">E</span>
-          </div>
+          <Logo size={36} />
           <div>
             <p className="text-white font-bold text-sm">Egyptian SAMURAI</p>
             <p className="text-gray-400 text-xs">管理パネル</p>

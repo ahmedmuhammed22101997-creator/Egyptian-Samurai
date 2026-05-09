@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Mail, MessageCircle, Share2, Link2 } from 'lucide-react'
+import Logo from '@/components/Logo'
 
 export default function Footer() {
   const t = useTranslations()
@@ -13,9 +14,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#D4AF37] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">E</span>
-              </div>
+              <Logo size={36} />
               <span className="font-bold text-lg">{t('brand')}</span>
             </div>
             <p className="text-gray-400 text-sm">

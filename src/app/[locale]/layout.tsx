@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import FloatingButtons from '@/components/layout/FloatingButtons'
 import PageViewTracker from '@/components/PageViewTracker'
+import SplashScreen from '@/components/SplashScreen'
 import '../globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -28,6 +29,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${inter.variable} ${notoSansJP.variable}`}>
       <body className="font-sans antialiased bg-[#FDFBF7] text-[#2C2C2C]">
         <NextIntlClientProvider messages={messages}>
+          <SplashScreen />
           <PageViewTracker />
           <Navbar />
           <main className="min-h-screen">{children}</main>
