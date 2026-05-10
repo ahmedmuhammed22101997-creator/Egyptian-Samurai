@@ -18,6 +18,7 @@ export default function Logo({ size = 40, className = '', priority = false }: Lo
         fill
         sizes={`${size * 2.5}px`}
         className="object-contain"
+        style={{ mixBlendMode: 'screen' }}
         priority={priority}
       />
     </div>
