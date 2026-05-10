@@ -23,11 +23,11 @@ export default function Navbar() {
 
   const toggleLocale = () => {
     const newLocale = locale === 'ja' ? 'en' : 'ja'
-    // Strip any current locale prefix
-    const bare = pathname.replace(/^\/(ja|en)(?=\/|$)/, '') || '/'
-    // Japanese is the default locale (no prefix); English is prefixed with /en
-    const target = newLocale === 'ja' ? bare : `/en${bare === '/' ? '' : bare}`
-    router.push(target)
+    // Strip any current locale prefix from path
+    const bare = pathname.replace(/^\/(ja|en)(\/|$)/, '/').replace(/\/$/, '') || '/'
+    // Japanese is default (no prefix), English uses /en prefix
+    const target = newLocale === 'en' ? `/en${bare === '/' ? '' : bare}` : bare || '/'
+    window.location.href = target
   }
 
   const navLinks = [
