@@ -10,7 +10,7 @@ export default function Logo({ size = 40, className = '', priority = false }: Lo
   return (
     <div
       className={`relative ${className}`}
-      style={{ width: size * 2.5, height: size }}
+      style={{ width: size * 2.5, height: size, mixBlendMode: 'screen' }}
     >
       <Image
         src="/logo.png"
@@ -18,7 +18,6 @@ export default function Logo({ size = 40, className = '', priority = false }: Lo
         fill
         sizes={`${size * 2.5}px`}
         className="object-contain"
-        style={{ mixBlendMode: 'screen' }}
         priority={priority}
       />
     </div>
