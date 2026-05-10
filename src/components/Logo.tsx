@@ -9,15 +9,15 @@ interface LogoProps {
 export default function Logo({ size = 40, className = '', priority = false }: LogoProps) {
   return (
     <div
-      className={`relative rounded-full overflow-hidden bg-white shadow-sm ${className}`}
-      style={{ width: size, height: size }}
+      className={`relative overflow-hidden bg-black ${className}`}
+      style={{ width: size * 2.5, height: size }}
     >
       <Image
-        src="/logo.svg"
+        src="/logo.png"
         alt="Egyptian SAMURAI"
         fill
-        sizes={`${size}px`}
-        className="object-cover"
+        sizes={`${size * 2.5}px`}
+        className="object-contain"
         priority={priority}
       />
     </div>
