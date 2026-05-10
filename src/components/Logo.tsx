@@ -10,7 +10,7 @@ export default function Logo({ size = 40, className = '', priority = false }: Lo
   return (
     <div
       className={`relative ${className}`}
-      style={{ width: size * 2.5, height: size, mixBlendMode: 'screen' }}
+      style={{ width: size * 2.5, height: size }}
     >
       <Image
         src="/logo.png"
