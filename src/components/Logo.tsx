@@ -9,7 +9,7 @@ interface LogoProps {
 export default function Logo({ size = 40, className = '', priority = false }: LogoProps) {
   return (
     <div
-      className={`relative overflow-hidden bg-black ${className}`}
+      className={`relative ${className}`}
       style={{ width: size * 2.5, height: size }}
     >
       <Image

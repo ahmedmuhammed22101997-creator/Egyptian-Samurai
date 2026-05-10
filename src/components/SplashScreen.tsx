@@ -34,8 +34,8 @@ export default function SplashScreen() {
         fading ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      <div className="relative w-64 h-32 sm:w-80 sm:h-40 overflow-hidden bg-black animate-pulse-slow">
-        <Image src="/logo.png" alt="Egyptian SAMURAI" fill sizes="320px" className="object-contain" priority />
+      <div className="relative w-96 h-48 sm:w-[500px] sm:h-60 animate-pulse-slow">
+        <Image src="/logo.png" alt="Egyptian SAMURAI" fill sizes="500px" className="object-contain" priority />
       </div>
       <div className="mt-8 w-40 h-1 bg-[#E8D5B7] rounded-full overflow-hidden">
         <div className="h-full w-1/3 bg-[#D4AF37] rounded-full animate-loader-slide" />
