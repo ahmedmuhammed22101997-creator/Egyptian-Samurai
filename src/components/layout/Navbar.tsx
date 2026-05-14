@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useTranslations, useLocale } from 'next-intl'
 import { Menu, X, Globe } from 'lucide-react'
 import Logo from '@/components/Logo'
@@ -11,7 +11,6 @@ export default function Navbar() {
   const tBrand = useTranslations()
   const locale = useLocale()
   const pathname = usePathname()
-  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
